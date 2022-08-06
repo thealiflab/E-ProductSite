@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+
+    <title>HTML Template</title>
+    
+</head>
+<body>
+
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-1">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="#" class="flex px-2 py-4 item-center">
+                            <img class="h-15 w-15" src="{% static 'myapp\images\shopping.png' %}" alt="">
+                            <span class="text-3xl font-semibold">Buy&Sell</span>
+                        </a>
+                    </div>
+                    <div class="item-center flex space-x-1">
+                        <a href="#" class="px-2 py-4 font-semibold text-2xl border-blue-500 border-b-4">Home</a>
+                        <a href="#" class="px-2 py-4 font-semibold text-2xl">About</a>
+                        <a href="#" class="px-2 py-4 font-semibold text-2xl">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>
